@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Img from 'gatsby-image';
-import { kebabCase } from 'lodash';
+import Button from './button'
 
 const ProjectCard = props => {
   const project = props.project;
@@ -26,7 +24,7 @@ const ProjectCard = props => {
               {project.node.tech ? (
                 <p>
                   {project.node.tech.map((tag, index) => (
-                    <span>{tag}{index === project.node.tech.length - 1 ? "" : ","} </span>
+                    <span key={tag}>{tag}{index === project.node.tech.length - 1 ? "" : ","} </span>
                   ))}
                 </p>
               ) : null}
@@ -39,7 +37,7 @@ const ProjectCard = props => {
               {project.node.description}
             </p>
             <a href={project.node.url}>
-              <button buttonText="Visit the Website">ver</button>
+              <Button buttonText="Visit the Website">Ver</Button>
             </a>
           </div>
         </div>

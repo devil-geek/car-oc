@@ -2,8 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Img from 'gatsby-image';
-import Button from '../components/button';
 import Header from '../components/header';
 import ProjectCard from '../components/projectCard';
 
@@ -17,7 +15,7 @@ const ProjectsPage = ({ data }) => (
 
     <div className="project-list">
       {data.allProjectsJson.edges.map(project => (
-        <ProjectCard project={project} />
+        <ProjectCard key={project.node.id} project={project} />
       ))}
     </div>
   </Layout>

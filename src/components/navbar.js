@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 let lastScrollY = 0;
 let ticking = false;
-const clientHeight = document.documentElement.clientHeight;
+var clientHeight;
 
 class Navbar extends Component {
   constructor(props) {
@@ -56,6 +56,7 @@ class Navbar extends Component {
   };
 
   componentDidMount() {
+    clientHeight = document.documentElement.clientHeight;
     window.addEventListener('scroll', this.handleScroll);
   }
 

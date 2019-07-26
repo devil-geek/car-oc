@@ -1,12 +1,11 @@
 [
   {
-    "title": "My First Project",
-    "date": "2018-08",
+    "title": "Re-size",
     "description":
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum repudiandae, autem eos voluptatum assumenda cum laborum iure nam in accusantium.",
-    "url": "https://example.com",
-    "thumbnailImage": "../images/projects/project-1.jpg",
-    "tech": ["React", "Sass", "UX"]
+      "App for visualize your app in different display sizes for responsive design.",
+    "url": " https://github.com/devil-geek/re-size ",
+    "thumbnailImage": "../images/projects/re-size-app.png",
+    "tech": ["Responsive design", "JQuery", "Electron", "CSS"]
   },
   {
     "title": "My Second Project",
