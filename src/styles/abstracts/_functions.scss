@@ -1,0 +1,10 @@
+// Receive col span and number of columns in the row
+@function col-width($col-span, $col-num) {
+  @return calc(#{$col-span} * ((100% - (#{$col-num - 1}) *
+          #{$gutter-horizontal}) / #{$col-num}) + #{($col-span - 1) *
+        $gutter-horizontal});
+}
+
+@function gradient($color1, $color2) {
+  @return linear-gradient(180deg, $color1 0%, $color2 95%);
+}

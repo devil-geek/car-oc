@@ -1,0 +1,189 @@
+/* Progress bar */
+
+.head-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  display: block;
+}
+
+.progress-bar {
+  height: 1px;
+  background: $primary;
+  width: 0%;
+}
+
+.navbar {
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+  &.dark {
+    background-color: $bg-dark;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+  }
+
+  & a {
+    display: inline-block;
+    color: $white;
+    text-align: center;
+    padding: 1.4rem 1.6rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+    text-decoration: none;
+
+   /*  &:first-child{
+      margin-left: 2rem;
+    }
+    &:last-child{
+      margin-right: 2rem;
+    } */
+
+    &.active {
+      color: $primary;
+    }
+
+
+    &.right{
+      float: right;
+
+      
+    }
+
+    &:hover {
+      color: $primary;
+    }
+
+    @include respond(tab-port) {
+      /* &:not(:first-child) {
+        //display: none;
+        opacity: 0;
+        transform: translateY(-100px);
+        text-align: center;
+        background-color: rgba($bg-dark, .6);
+      }
+
+      &:first-child {
+        text-align: left;
+      }
+
+      &.burger {
+        float: right !important;
+        display: block;
+        background-color: transparent;
+        transform: translateY(0);
+        opacity: 1;
+      } */
+      &{
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &.responsive {
+    position: relative;
+    a {
+      float: none;
+      //display: block;
+      opacity: 1;
+      transform: translateY(0);
+      &.burger {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+/* Hide the link that should open and close the navbar on small screens */
+.navbar .burger {
+  display: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 14px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: $primary-text;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    color: $white;
+  }
+
+  span:nth-child(1) {
+    top: 0px;
+  }
+
+  span:nth-child(2),
+  span:nth-child(3) {
+    top: 6px;
+  }
+
+  span:nth-child(4) {
+    top: 12px;
+  }
+
+  &.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  &.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  &.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+}
+

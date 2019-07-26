@@ -1,0 +1,65 @@
+.project-card{
+    background-image: linear-gradient(115deg, transparent 0%, transparent 50%,rgba($card-dark,0.8) 50%),url(../images/abstractsdark.jpg);
+    background-size: contain;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.3);
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+
+
+    &-content {
+    width: 42%;
+    right: 0;
+    padding: 8rem 2rem 2rem;
+    position: absolute;
+    z-index: 10;
+
+    &__meta {
+      border-left: 3px solid $primary;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      color: $secondary-text;
+      font-style: italic;
+      text-transform: capitalize;
+
+      p {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: .5rem 0;
+        user-select: none;
+
+        a {
+          color: $secondary-text;
+        }
+      }
+
+      &__read {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 5rem;
+      }
+    }
+
+    &__author {
+      font-weight: 400;
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+      color: $secondary-text;
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      color: $white;
+
+      a {
+        color: $white;
+      }
+    }
+
+    &__excerpt{
+      font-size: 1.3rem;
+    }
+  }
+}

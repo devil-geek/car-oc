@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* this defines 1rem is */
+  font-size: 62.5%;
+
+  /* default browser font-size = 16px 
+    we want 10px for make 1rem = 10px 
+    so 16 / 10 = 0.625
+    */
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  background-color: $bg-dark;
+  box-sizing: border-box;
+  color: $white;
+  overflow-x: hidden;
+  font-family: $font;
+  line-height: 1.5;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus,
+a:link {
+  color: $primary;
+}
+
+a,
+a.tag:hover {
+  text-decoration: none;
+}
