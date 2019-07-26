@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './button'
+import Button from './button';
 
 const ProjectCard = props => {
   const project = props.project;
@@ -18,13 +18,17 @@ const ProjectCard = props => {
               ')',
           }}
         >
-
           <div className="project-card-content">
             <div className="project-card-content__meta">
               {project.node.tech ? (
                 <p>
+                  {project.node.company}
+                  <br />
                   {project.node.tech.map((tag, index) => (
-                    <span key={tag}>{tag}{index === project.node.tech.length - 1 ? "" : ","} </span>
+                    <span className="tag" key={tag}>
+                      {tag}
+                      {index === project.node.tech.length - 1 ? '' : ','}{' '}
+                    </span>
                   ))}
                 </p>
               ) : null}
@@ -36,8 +40,13 @@ const ProjectCard = props => {
             <p className="project-card-content__excerpt">
               {project.node.description}
             </p>
-            <a href={project.node.url}>
-              <Button buttonText="Visit the Website">Ver</Button>
+            <a
+              className="is-pulled-right u-mr-md u-mt-md"
+              href={project.node.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button buttonText="Visit the Website" />
             </a>
           </div>
         </div>

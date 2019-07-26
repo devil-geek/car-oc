@@ -11,7 +11,7 @@ const ProjectsPage = ({ data }) => (
       title="Home"
       keywords={[`gatsby`, `application`, `react`, `portfolio`]}
     />
-    <Header title={'Projects'} text={'Ideas and experiments'} />
+    <Header title={'Projects'} text={'Some of my work'} />
 
     <div className="project-list">
       {data.allProjectsJson.edges.map(project => (
@@ -25,15 +25,15 @@ export default ProjectsPage;
 
 export const projectsQuery = graphql`
   query {
-    allProjectsJson(sort: { order: DESC, fields: [date] }) {
+    allProjectsJson {
       edges {
         node {
           id
           title
-          date
           description
           url
           tech
+          company
           thumbnailImage {
             childImageSharp {
               fluid(maxWidth: 1920) {

@@ -5,24 +5,25 @@
       "App for visualize your app in different display sizes for responsive design.",
     "url": " https://github.com/devil-geek/re-size ",
     "thumbnailImage": "../images/projects/re-size-app.png",
-    "tech": ["Responsive design", "JQuery", "Electron", "CSS"]
+    "tech": ["JavaScript", "JQuery", "Electron", "CSS"],
+    "company": "Personal project"
   },
   {
-    "title": "My Second Project",
-    "date": "2018-09",
+    "title": "Kore",
     "description":
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum repudiandae, autem eos voluptatum assumenda cum laborum iure nam in accusantium.",
-    "url": "https://example.com",
-    "thumbnailImage": "../images/projects/project-2.jpg",
-    "tech": ["Unity 3d", "C#", "Videogames"]
+      "Kore te ayuda a crear flujos de trabajo para que tu operación sea consistente, medible y escalable. Ayuda a tu equipo a operar con toda la información necesaria para trabajar.",
+    "url": "https://www.opkore.io",
+    "thumbnailImage": "../images/projects/kore.png",
+    "tech": ["React", "NodeJS", "Sass"],
+    "company": "Common Sense"
   },
   {
-    "title": "Another Project",
-    "date": "2018-09",
+    "title": "Financiera independencia",
     "description":
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum repudiandae, autem eos voluptatum assumenda cum laborum iure nam in accusantium.",
-    "url": "https://example.com",
-    "thumbnailImage": "../images/beard-geek-logo-template.jpg",
-    "tech": ["FrontEnd"]
+      "Landing page and credit calculator frontend only.",
+    "url": "https://www.independencia.com.mx/solicitud-online",
+    "thumbnailImage": "../images/projects/findep.png",
+    "tech": ["FrontEnd", "React", "Sass"],
+    "company": "Common Sense"
   }
 ]

@@ -41,6 +41,34 @@
   }
 }
 
+.u-mt {
+  &-big {
+    margin-top: 3rem;
+  }
+
+  &-md {
+    margin-top: 1.5rem;
+  }
+
+  &-sm {
+    margin-top: .5rem;
+  }
+}
+
+.u-mr{
+  &-big {
+    margin-right: 3rem;
+  }
+
+  &-md {
+    margin-right: 1.5rem;
+  }
+
+  &-sm {
+    margin-right: .5rem;
+  }
+}
+
 .u-padless{
   padding-top: 0 !important;
   padding-left: 0 !important;
@@ -96,3 +124,8 @@
     color: $secondary-text !important;
   }
 }
+
+.is-pulled-right{
+  float: right;
+}
+

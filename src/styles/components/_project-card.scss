@@ -7,7 +7,6 @@
     position: relative;
     overflow: hidden;
 
-
     &-content {
     width: 42%;
     right: 0;
@@ -22,9 +21,11 @@
       color: $secondary-text;
       font-style: italic;
       text-transform: capitalize;
-
+      .tag{
+        font-size: 1.2rem;
+      }
       p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin: 0;
         padding: .5rem 0;
         user-select: none;
