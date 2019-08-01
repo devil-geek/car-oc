@@ -1,45 +1,41 @@
-.project-card{
-    background-image: linear-gradient(115deg, transparent 0%, transparent 50%,rgba($card-dark,0.8) 50%),url(../images/abstractsdark.jpg);
-    background-size: contain;
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.3);
-    height: 40rem;
-    position: relative;
-    overflow: hidden;
+.project-card {
+ /*  background-image: linear-gradient(
+      115deg,
+      transparent 0%,
+      transparent 50%,
+      rgba($card-dark, 0.8) 50%
+    ),
+    url(../images/abstractsdark.jpg); 
+  background-size: contain;*/
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  height: 60em;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 
-    &-content {
-    width: 42%;
+  &-content {
     right: 0;
     padding: 8rem 2rem 2rem;
     position: absolute;
     z-index: 10;
 
     &__meta {
-      border-left: 3px solid $primary;
-      padding-left: 15px;
       margin-bottom: 10px;
       color: $secondary-text;
-      font-style: italic;
       text-transform: capitalize;
-      .tag{
-        font-size: 1.2rem;
+      .tag {
+        font-size: 1.5rem;
       }
       p {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         margin: 0;
-        padding: .5rem 0;
+        padding: 0.5rem 0;
         user-select: none;
 
         a {
           color: $secondary-text;
         }
-      }
-
-      &__read {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 5rem;
       }
     }
 
@@ -51,7 +47,7 @@
     }
 
     &__title {
-      font-size: 2.4rem;
+      font-size: 3rem;
       color: $white;
 
       a {
@@ -59,8 +55,91 @@
       }
     }
 
-    &__excerpt{
-      font-size: 1.3rem;
+    &__excerpt {
+      font-size: 1.8rem;
     }
+  }
+
+  section {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  div.frame {
+    overflow: hidden;
+  }
+
+  div.img,
+  div.border {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  div.img {
+    -webkit-transition: all 600ms cubic-bezier(0.4, 0.25, 0.3, 1);
+    transition: all 600ms cubic-bezier(0.4, 0.25, 0.3, 1);
+    background-size: cover;
+  }
+
+  div.border {
+    -webkit-transition: all 500ms cubic-bezier(0.5, 0.3, 0.25, 1);
+    transition: all 500ms cubic-bezier(0.5, 0.3, 0.25, 1);
+    box-shadow: inset 0px 0px 0px 0px hsla(212, 18%, 8%, 0.6);
+  }
+
+  div.border > * {
+    -webkit-transition: all 550ms cubic-bezier(0.3, 0.2, 0.25, 1);
+    transition: all 550ms cubic-bezier(0.3, 0.2, 0.25, 1);
+    font-size: 5rem;
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    bottom: 0.7em;
+    left: 0.7em;
+    color: white;
+    border: 1px solid transparent;
+    opacity: 0;
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  div.frame:hover div.img {
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-filter: grayscale(0.9) brightness(0.7) contrast(1.35);
+    filter: grayscale(0.9) brightness(0.7) contrast(1.35);
+  }
+
+  div.frame:hover div.border {
+    box-shadow: inset 0px 0px 0px 3.5em hsla(0, 0%, 6%, 0.85);
+    background: hsla(212, 18%, 8%, 0.6);
+  }
+
+  div.frame:hover div.border .project-card-content {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border: 2px solid #fefefa;
+  }
+
+  div.frame:active div.border {
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: inset 0px 0px 0px 8em hsla(0, 0%, 6%, 0.85);
+  }
+
+  div.frame:active div.border .project-card-content {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
