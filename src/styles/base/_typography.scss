@@ -1,6 +1,6 @@
 strong {
   color: $white;
-  font-family: "Ubuntu", sans-serif;
+  font-family: $title-font;
 }
 
 h1,
@@ -9,7 +9,7 @@ h3,
 h4,
 h5 {
   color: $white;
-  font-family: "Ubuntu", sans-serif;
+  font-family: $title-font;
   margin-bottom: 1rem;
   font-weight: 600;
   line-height: 1.125;
@@ -55,7 +55,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #ff7b7b;
   background: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
   font-size: 1em;
   text-align: left;
   white-space: pre;

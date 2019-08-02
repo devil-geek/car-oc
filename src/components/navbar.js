@@ -1,116 +1,68 @@
 /* eslint-disable */
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
-
-let lastScrollY = 0;
-let ticking = false;
-var clientHeight;
+import Octicon, { Home, Book, FileMedia } from '@primer/octicons-react';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nav: 'navbar transparent',
+      nav: 'navbar',
       burger: 'burger',
-      dark: '',
-      pg: 0,
     };
   }
 
-  Toggle = () => {
-    this.setState({
-      nav:
-        this.state.nav === 'navbar transparent responsive'
-          ? 'navbar transparent'
-          : 'navbar transparent responsive',
-      burger: this.state.burger === 'burger open' ? 'burger' : 'burger open',
-    });
-  };
-
-  handleScroll = e => {
-    lastScrollY = window.scrollY;
-    const scroll = document.documentElement.scrollTop;
-
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const height = document.documentElement.scrollHeight - clientHeight;
-        const scrolled = (scroll / height) * 100;
-
-        if (lastScrollY >= 500) {
-          this.setState({
-            dark: ' dark',
-            pg: `${scrolled}%`,
-          });
-        } else {
-          this.setState({
-            dark: '',
-            pg: `${scrolled}%`,
-          });
-        }
-
-        ticking = false;
-      });
-
-      ticking = true;
-    }
-  };
-
-  componentDidMount() {
-    clientHeight = document.documentElement.clientHeight;
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
   render() {
-    const { nav, burger, dark } = this.state;
+    const { nav, burger } = this.state;
     return (
       <div className="head-fixed">
         <nav
-          className={nav + dark}
+          className={nav}
           role="navigation"
           aria-label="main navigation"
           id="navbar"
         >
-          <Link className="navbar-item" to="/">
-            {this.props.siteTitle}
-          </Link>
-          <Link
-            className="navbar-item"
-            activeClassName="navbar-current"
-            to="/blog"
+          <AniLink
+            cover
+            bg="#1e1e1f"
+            direction="right"
+            className="navbar-item tooltip"
+            to="/"
+            activeClassName="active"
           >
-            Blog
-          </Link>
-          <Link
-            className="navbar-item"
-            activeClassName="navbar-current"
+            <span className="tooltiptext">Home</span>
+            <Octicon
+              icon={Home}
+              ariaLabel={this.props.siteTitle}
+              size="medium"
+            />
+          </AniLink>
+          <AniLink
+            cover
+            bg="#1e1e1f"
+            direction="right"
+            className="navbar-item tooltip"
+            activeClassName="active"
             to="/projects"
           >
-            Projects
-          </Link>
-          <a
-            className={burger}
-            aria-label="menu"
-            aria-expanded="false"
-            onClick={this.Toggle}
-            id="burger"
+            <span className="tooltiptext">Projects</span>
+            &nbsp;
+            <Octicon icon={FileMedia} ariaLabel="Projects" size="medium" />
+          </AniLink>
+
+          <AniLink
+            cover
+            bg="#1e1e1f"
+            direction="right"
+            className="navbar-item tooltip"
+            activeClassName="active"
+            to="/blog"
           >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </a>
+            <span className="tooltiptext">Blog</span>
+            <Octicon icon={Book} ariaLabel="Blog" size="medium" />
+          </AniLink>
+
         </nav>
-        <div className="progress-container">
-          <div
-            className="progress-bar"
-            id="pgBar"
-            style={{ width: this.state.pg }}
-          />
-        </div>
       </div>
     );
   }

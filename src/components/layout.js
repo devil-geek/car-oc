@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Footer from './footer';
 import '../styles/main.scss';
 import Navbar from './navbar';
 
@@ -21,7 +20,6 @@ const Layout = ({ children }) => (
       <div className="site">
         <Navbar siteTitle={data.site.siteMetadata.title} />
         <main className="site-content">{children}</main>
-        <Footer />
       </div>
     )}
   />

@@ -3,63 +3,55 @@
 .head-fixed {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 100;
-  width: 100%;
-}
-
-.progress-container {
-  width: 100%;
-  height: 8px;
-  background: transparent;
-  display: block;
-}
-
-.progress-bar {
-  height: 1px;
-  background: $primary;
-  width: 0%;
+  width: 6rem;
+  height: 100%;
+  background-color: rgba(30,30,31,0.85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+  @include respond(tab-land) {
+    width: 7rem;
+    height: 100%;
+  }
+  @include respond(tab-port) {
+    width: 100%;
+    height: 6rem;
+  }
+  
 }
 
 .navbar {
-  overflow: hidden;
   transition: all 0.5s ease-in-out;
   z-index: 100;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 
-  &.transparent {
-    background-color: transparent;
+  @include respond(tab-port) {
+    & {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
-
-  &.dark {
-    background-color: $bg-dark;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
-  }
-
   & a {
-    display: inline-block;
-    color: $white;
+    display: block;
+    color: $primary-text;
     text-align: center;
     padding: 1.4rem 1.6rem;
     text-decoration: none;
     font-size: 1.4rem;
-    transition: all 0.3s;
+    transition: all 0.5s;
     text-decoration: none;
-
-   /*  &:first-child{
-      margin-left: 2rem;
-    }
-    &:last-child{
-      margin-right: 2rem;
-    } */
 
     &.active {
       color: $primary;
     }
 
-
-    &.right{
+    &.right {
       float: right;
-
-      
     }
 
     &:hover {
@@ -67,27 +59,9 @@
     }
 
     @include respond(tab-port) {
-      /* &:not(:first-child) {
-        //display: none;
-        opacity: 0;
-        transform: translateY(-100px);
-        text-align: center;
-        background-color: rgba($bg-dark, .6);
-      }
-
-      &:first-child {
-        text-align: left;
-      }
-
-      &.burger {
-        float: right !important;
-        display: block;
-        background-color: transparent;
-        transform: translateY(0);
-        opacity: 1;
-      } */
-      &{
-        font-size: 1.8rem;
+      & {
+        display: inline-block;
+        padding: 1.2rem 1.4rem;
       }
     }
   }
@@ -186,4 +160,3 @@
     left: 50%;
   }
 }
-
