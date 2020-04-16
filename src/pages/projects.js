@@ -34,13 +34,7 @@ export const projectsQuery = graphql`
           url
           tech
           company
-          thumbnailImage {
-            childImageSharp {
-              fluid(maxWidth: 1920) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          thumbnailImage
         }
       }
     }

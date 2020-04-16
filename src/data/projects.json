@@ -1,28 +1,25 @@
 [
   {
     "title": "Re-size",
-    "description":
-      "App for visualize your app in different display sizes for responsive design.",
+    "description": "App for visualize your app in different display sizes for responsive design.",
     "url": " https://github.com/devil-geek/re-size ",
-    "thumbnailImage": "../images/projects/re-size-app.png",
+    "thumbnailImage": "re-size-app.png",
     "tech": ["JavaScript", "JQuery", "Electron", "CSS"],
     "company": "Personal project"
   },
   {
     "title": "Kore",
-    "description":
-      "Kore te ayuda a crear flujos de trabajo para que tu operación sea consistente, medible y escalable. Ayuda a tu equipo a operar con toda la información necesaria para trabajar.",
+    "description": "Kore te ayuda a crear flujos de trabajo para que tu operación sea consistente, medible y escalable. Ayuda a tu equipo a operar con toda la información necesaria para trabajar.",
     "url": "https://www.opkore.io",
-    "thumbnailImage": "../images/projects/kore.png",
+    "thumbnailImage": "kore.png",
     "tech": ["React", "NodeJS", "Sass"],
     "company": "Common Sense"
   },
   {
     "title": "Financiera independencia",
-    "description":
-      "Landing page and credit calculator frontend only.",
+    "description": "Landing page and credit calculator frontend only.",
     "url": "https://www.independencia.com.mx/solicitud-online",
-    "thumbnailImage": "../images/projects/findep.png",
+    "thumbnailImage": "findep.png",
     "tech": ["FrontEnd", "React", "Sass"],
     "company": "Common Sense"
   }
