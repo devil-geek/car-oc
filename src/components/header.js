@@ -13,18 +13,21 @@ const Header = () => (
           <a
             className="social-btn social-btn-mail"
             href="https://www.linkedin.com/in/car-oj"
+            aria-label="Linkedin"
           >
             <FaLinkedinIn />
           </a>
           <a
             className="social-btn social-btn-mail"
             href="https://github.com/devil-geek"
+            aria-label="Github"
           >
             <FaGithub />
           </a>
           <a
             className="social-btn social-btn-mail"
             href="mailto:car.oj@hotmail.com?subject=Contact"
+            aria-label="Mail"
           >
             <FaEnvelope />
           </a>

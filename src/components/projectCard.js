@@ -16,6 +16,7 @@ const ProjectCard = props => {
             target="_blank"
             rel="noopener noreferrer"
             className="link"
+            aria-label={project.title}
           >
             <Img fluid={project.image.childImageSharp.fluid} />
           </a>
@@ -39,6 +40,7 @@ const ProjectCard = props => {
               target="_blank"
               rel="noopener noreferrer"
               className="link"
+              aria-label={project.title}
             >
               {project.title}
             </a>
@@ -49,6 +51,7 @@ const ProjectCard = props => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-btn social-btn-site"
+            aria-label={project.title}
           >
             <FaExternalLinkAlt />
           </a>
