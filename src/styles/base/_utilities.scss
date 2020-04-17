@@ -1,116 +1,131 @@
 // margin less top
 .u-mlt {
+  margin-top: 0 !important;
   &-big {
-    margin-top: -3rem;
+    margin-top: -3rem !important;
   }
 
   &-md {
-    margin-top: -1.5rem;
+    margin-top: -1.5rem !important ;
   }
 
   &-sm {
-    margin-top: -.5rem;
+    margin-top: -0.5rem !important;
   }
 }
 
 .u-mlb {
   &-big {
-    margin-bottom: -3rem;
+    margin-bottom: -3rem !important;
   }
 
   &-md {
-    margin-bottom: -1.5rem;
+    margin-bottom: -1.5rem !important;
   }
 
   &-sm {
-    margin-bottom: -.5rem;
+    margin-bottom: -0.5rem !important;
   }
 }
 
 .u-mb {
   &-big {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
   }
 
   &-md {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
   }
 
   &-sm {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem !important;
   }
 }
 
 .u-mt {
   &-big {
-    margin-top: 3rem;
+    margin-top: 3rem !important;
   }
 
   &-md {
-    margin-top: 1.5rem;
+    margin-top: 1.5rem !important;
   }
 
   &-sm {
-    margin-top: .5rem;
+    margin-top: 0.5rem !important;
   }
 }
 
-.u-mr{
+.u-mr {
   &-big {
-    margin-right: 3rem;
+    margin-right: 3rem !important;
   }
 
   &-md {
-    margin-right: 1.5rem;
+    margin-right: 1.5rem !important;
   }
 
   &-sm {
-    margin-right: .5rem;
+    margin-right: 0.5rem !important;
   }
 }
 
-.u-padless{
+.u-ml {
+  &-big {
+    margin-left: 3rem !important;
+  }
+
+  &-md {
+    margin-left: 1.5rem !important;
+  }
+
+  &-sm {
+    margin-left: 0.5rem !important;
+  }
+}
+
+.u-padless {
   padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
   padding-bottom: 0 !important;
 
-  &-t{
+  &-t {
     padding-top: 0 !important;
   }
 
-  &-l{
+  &-l {
     padding-left: 0 !important;
   }
 
-  &-r{
+  &-r {
     padding-right: 0 !important;
   }
 
-  &-b{
+  &-b {
     padding-bottom: 0 !important;
   }
 }
 
-.u-mless{
+.u-mless {
   margin-top: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   margin-bottom: 0 !important;
 
-  &-t{
+  &-t {
     margin-top: 0 !important;
   }
 
-  &-l{
+  &-l {
     margin-left: 0 !important;
   }
 
-  &-r{
+  &-r {
     margin-right: 0 !important;
   }
 
-  &-b{
+  &-b {
     margin-bottom: 0 !important;
   }
 }
@@ -119,13 +134,23 @@
   text-align: center;
 }
 
-.u-text{
-  &-secondary{
-    color: $secondary-text !important;
+.u-text {
+  &-secondary {
+    color: $text-secondary !important;
   }
 }
 
-.is-pulled-right{
+.u-pulled-right {
   float: right;
 }
 
+.u-centered {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.u-padding {
+  &-s {
+    padding: 0.5rem;
+  }
+}

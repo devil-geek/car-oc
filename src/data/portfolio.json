@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Re-size",
+    "description": "A tool to help with responsive design, you can visualize your app in different display sizes at the same time.",
+    "link": " https://github.com/devil-geek/re-size ",
+    "image": "re-size-app.png",
+    "tech": ["JavaScript", "JQuery", "Electron", "Bulma"]
+  },
+  {
+    "title": "Kamino",
+    "description": "Lead management and customer happiness platform, front-end work in React and back-end with NodeJS, I also made integrations with Facebook, Google and Zendesk APIs",
+    "link": "https://www.kamino.us",
+    "image": "kamino.png",
+    "tech": ["React", "NodeJS", "Sass", "MongoDb"]
+  },
+  {
+    "title": "Common Sense",
+    "description": "Landing page, front-end work in React and Sass.",
+    "link": "https://commonsense.io/",
+    "image": "common-sense.png",
+    "tech": ["React", "Sass"]
+  },
+  {
+    "title": "Financiera independencia",
+    "description": "Landing page and credit calculator, front-end work in React with Gatsby.",
+    "link": "https://www.independencia.com.mx/solicitud-online",
+    "image": "findep.png",
+    "tech": ["Gatsby", "React", "Sass", "Bulma"]
+  },
+  {
+    "title": "i-olotec",
+    "description": "Landing page, design and front-end work in HTML and Sass.",
+    "link": "https://fervent-liskov-867674.netlify.app",
+    "image": "i-olotec.png",
+    "tech": ["HTML", "Sass", "JQuery"]
+  },
+  {
+    "title": "Portfolio",
+    "description": "Portfolio made from scratch with ❤ using Gatsby and Sass.",
+    "link": "https://car-oc.com",
+    "image": "car-oc.png",
+    "tech": ["Gatsby", "React", "Sass", "❤"]
+  }
+]

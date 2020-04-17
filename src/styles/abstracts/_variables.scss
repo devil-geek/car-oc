@@ -1,26 +1,23 @@
 $grid-width: 114rem;
-$gutter-vertical: 8rem;
+$gutter-vertical: 2rem;
 $gutter-horizontal: 6rem;
 $default-font-size: 1.6rem;
-$gutter-vertical-small: 6rem;
+$gutter-vertical-small: 1rem;
 
 $primary: #9575cd;
 $primary-dark:#5F468A;
-$bg-dark: #27292e;
-$card-dark: lighten($bg-dark, 5%); //#35363b;
+$bg: #100e19;
+$card: #202026;
 
-$primary-text: #d4d3d3;
-$secondary-text: #b1b1b1;
-$tertiary-text: #5d6168;
-$input-bg: darken($bg-dark, 5%); //#27292d;
+$text-primary: #d4d3d3;
+$text-secondary: #b1b1b1;
+$text-tertiary: #5d6168;
+
+$input-bg: darken($bg, 5%); //#27292d;
 $white: #fff;
 
-$shadow: rgba(13, 13, 13, 0.12) 0px 1px 6px, rgba(13, 13, 13, 0.24) 0px 1px 4px;
+$shadow: 0rem 0 3rem #000;
 $shadowHover: rgba(13, 13, 13, 0.19) 0px 10px 30px, rgba(13, 13, 13, 0.24) 0px 6px 10px;
 
-$dark-primary: #535;
-$dark: #010005;
-
-
-$font: 'Open Sans',
-sans-serif;
+$font: 'Montserrat', sans-serif;
+$title-font: 'Josefin Sans', sans-serif;

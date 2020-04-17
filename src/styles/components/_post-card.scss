@@ -1,8 +1,13 @@
-$transitionSpeed: .3s;
+$transitionSpeed: 0.3s;
 
 .post-card {
-  max-width: 100%;
+  width: 500px;
+  @include respond(phone) {
+    width: 90%;
+    overflow: hidden;
+  }
 
+  margin: 2.5rem;
   &:hover {
     img {
       filter: grayscale(0);
@@ -17,7 +22,7 @@ $transitionSpeed: .3s;
     clip-path: polygon(0 0, 100% 0, 100% 70%, 10% 86%, 10% 100%, 0 100%);
     position: relative;
     z-index: 3;
-    max-height: 280px;
+    max-height: 350px;
 
     /* @include respond(tab-port) {
      clip-path: polygon(0 0, 100% 0, 100% 80%, 10% 95%, 10% 100%, 0 100%);
@@ -30,7 +35,7 @@ $transitionSpeed: .3s;
   }
 
   &-content {
-    background: $card-dark;
+    background: $card;
     margin-top: -10rem;
     margin-left: 10.1%;
     width: 90%;
@@ -46,17 +51,25 @@ $transitionSpeed: .3s;
       border-left: 3px solid $primary;
       padding-left: 15px;
       margin-bottom: 10px;
-      color: $secondary-text;
-      font-style: italic;
+      color: $text-secondary;
+      //font-style: italic;
       text-transform: capitalize;
 
+      .tag {
+        background: $primary-dark;
+        color: $text-primary;
+        padding: 0.3rem 1rem;
+        font-size: 1.3rem;
+        border-radius: 20px;
+        margin: 0 0.2rem;
+      }
       p {
         font-size: 1.6rem;
         margin: 0;
         user-select: none;
 
         a {
-          color: $secondary-text;
+          color: $text-secondary;
         }
       }
 
@@ -72,7 +85,7 @@ $transitionSpeed: .3s;
       font-weight: 400;
       font-size: 1.4rem;
       margin-bottom: 3rem;
-      color: $secondary-text;
+      color: $text-secondary;
     }
 
     &__title {
@@ -84,13 +97,13 @@ $transitionSpeed: .3s;
       }
     }
 
-    &__excerpt{
+    &__excerpt {
       font-size: 1.3rem;
     }
   }
 
-  .gatsby-image-wrapper{
-    max-height: 280px;
+  .gatsby-image-wrapper {
+    max-height: 350px;
     z-index: -1;
   }
 }

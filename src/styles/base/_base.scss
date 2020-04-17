@@ -24,15 +24,15 @@ html {
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
   }
 
-  @include respond(big-desktop) {
+  /* @include respond(big-desktop) {
     font-size: 75%; //1rem = 12, 12/16
-  }
+  } */
 }
 
 body {
-  background-color: $bg-dark;
+  background-color: $bg;
   box-sizing: border-box;
-  color: $white;
+  color: $text-secondary;
   overflow-x: hidden;
   font-family: $font;
   line-height: 1.5;

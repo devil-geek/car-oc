@@ -1,31 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-
-import Footer from './footer';
 import '../styles/main.scss';
-import Navbar from './navbar';
+import Footer from './footer';
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <div className="site">
-        <Navbar siteTitle={data.site.siteMetadata.title} />
-        <main className="site-content">{children}</main>
-        <Footer />
-      </div>
-    )}
-  />
-);
+const Layout = ({ children }) => {
+  return (
+    <>
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
