@@ -15,7 +15,7 @@ const About = () => {
               Hi, I'm Carlos, a software developer. I have developed websites,
               mobile apps, iot systems and video games, I really like challenges
               and the attention to detail. I am self-taught, I learn fast and I
-              am always improving my self.
+              am always improving myself.
             </p>
           </div>
         </div>
