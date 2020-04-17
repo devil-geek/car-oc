@@ -1,0 +1,52 @@
+.social-btn {
+  background: transparent;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.3rem;
+  border: none; //2px solid white;
+  color: white;
+  padding: 0.85rem;
+  margin: 0 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: none;
+  &-linkedin {
+    border-color: #0077b5;
+    color: #0077b5;
+    &:hover {
+      background: #0077b5;
+      color: white;
+    }
+  }
+
+  &-github {
+    border-color: #5c5c5c;
+    color: #5c5c5c;
+    &:hover {
+      background: #5c5c5c;
+      color: white;
+    }
+  }
+
+  &-mail {
+    border-color: $primary;
+    color: $text-tertiary;
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &-site {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    border-color: $primary;
+    color: $text-tertiary !important;
+    cursor: pointer;
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}

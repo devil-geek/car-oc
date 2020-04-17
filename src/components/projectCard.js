@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from './button';
+import Img from 'gatsby-image';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectCard = props => {
   const project = props.project;
@@ -7,98 +8,50 @@ const ProjectCard = props => {
     return null;
   }
   return (
-    <div key={project.node.id} className="row">
-      <div className="col-10-10 col-centered project-card">
-        {/* <div
-          className="project-card"
-          style={{
-            backgroundImage:
-              'linear-gradient(100deg, transparent 0%, transparent 50%,rgb(51, 53, 60) 50%), url(' +
-              project.node.thumbnailImage.childImageSharp.fluid.src +
-              ')',
-          }}
-        >
+    <div key={project.id}>
+      <div className="post-card">
+        <div className="post-card-img">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            <Img fluid={project.image.childImageSharp.fluid} />
+          </a>
+        </div>
 
-          <div className="project-card-content">
-            <div className="project-card-content__meta">
-              {project.node.tech ? (
-                <p>
-                  {project.node.company}
-                  <br />
-                  {project.node.tech.map((tag, index) => (
-                    <span className="tag" key={tag}>
-                      {tag}
-                      {index === project.node.tech.length - 1 ? '' : ','}{' '}
-                    </span>
-                  ))}
-                </p>
-              ) : null}
-            </div>
-
-            <h4 className="project-card-content__title">
-              {project.node.title}
-            </h4>
-            <p className="project-card-content__excerpt">
-              {project.node.description}
-            </p>
+        <div className="post-card-content">
+          <div className="post-card-content__meta">
+            {project.tech ? (
+              <p className="flex-container">
+                {project.tech.map(tag => (
+                  <span key={tag} className="tag">
+                    {tag}
+                  </span>
+                ))}
+              </p>
+            ) : null}
+          </div>
+          <h4 className="post-card-content__title">
             <a
-              className="is-pulled-right u-mr-md u-mt-md"
-              href={project.node.url}
+              href={project.link}
               target="_blank"
               rel="noopener noreferrer"
+              className="link"
             >
-              <Button buttonText="Visit the Website" />
+              {project.title}
             </a>
-          </div>
-        </div> */}
-        <div className="project-card">
-          <section>
-            <div className="frame">
-              <div
-                className="img"
-                style={{
-                  backgroundImage:
-                    'url(' +
-                    project.node.thumbnailImage.childImageSharp.fluid.src +
-                    ')',
-                }}
-              />
-              <div className="border">
-                <div className="project-card-content">
-                  <h1 className="project-card-content__title">
-                    {project.node.title}
-                  </h1>
-                  <h2>
-                    {project.node.company}
-                  </h2>
-                  <div className="project-card-content__meta">
-                    {project.node.tech ? (
-                      <p>
-                        {project.node.tech.map((tag, index) => (
-                          <span className="tag" key={tag}>
-                            {tag}
-                            {index === project.node.tech.length - 1
-                              ? ''
-                              : ' | '}{' '}
-                          </span>
-                        ))}
-                      </p>
-                    ) : null}
-                  </div>
-                  <p className="project-card-content__excerpt">
-                    {project.node.description}
-                  </p>
-                  <a
-                    href={project.node.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button buttonText="Visit the Website" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
+          </h4>
+          <p className="post-card-content__excerpt">{project.description}</p>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-btn social-btn-site"
+          >
+            <FaExternalLinkAlt />
+          </a>
         </div>
       </div>
     </div>

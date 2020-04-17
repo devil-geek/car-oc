@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import seoImage from '../images/kitten-1.jpeg';
-
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, seoImage }) {
   return (
     <StaticQuery
       query={detailsQuery}

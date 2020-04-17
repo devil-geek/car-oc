@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Carlos Ocejo`,
-    description: `Personal Website built with Gatsby`,
-    author: `Car OJ`,
-    baseUrl: `https://youthful-yonath-7e38ab.netlify.com/`,
+    description: `Carlos Ocejo's Portfolio`,
+    author: `Car Oc`,
+    baseUrl: `https://car-oc.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,7 +37,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,58 +1,37 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { FaLinkedinIn, FaGithub, FaEnvelope } from 'react-icons/fa';
 
-const Header = ({ data, title, text }) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          placeholderImage: file(relativePath: { eq: "abstractsdark.jpg" }) {
-            childImageSharp {
-              fluid(maxWidth: 1920) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      `}
-      render={data => (
-        <header
-          className="home"
-          style={{
-            backgroundImage:
-              'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 95%), url(' +
-              data.placeholderImage.childImageSharp.fluid.src +
-              ')',
-          }}
-        >
-          <div className="home-box">
-            <h1 className="home-box-title">{title}</h1>
-            <h2 className="home-box-text">
-              <div className="row">
-                <div className="col-2-3 col-centered">
-                  <p>{text}</p>
-                </div>
-              </div>
-            </h2>
-          </div>
-        </header>
-      )}
-    />
-  );
-};
-
-Header.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-};
-
-Header.defaultProps = {
-  title: `Hey i'm Carlos Ocejo`,
-  text: `I have developed websites, mobile applications, iot systems and
-              videogames, my strength is in the front end focused on
-              optimization and attention to detail. I'm self-taught, I learn
-              fast and i'm always improving my self.`,
-};
+const Header = () => (
+  <header>
+    <section id="header">
+      <div className="container">
+        <div className="u-center-text">
+          <div className="hi">Hello I'm</div>
+          <h2>Carlos Ocejo</h2>
+          <h5 className="u-mlt-sm u-ml-sm">Software Developer</h5>
+          <br />
+          <a
+            className="social-btn social-btn-mail"
+            href="https://www.linkedin.com/in/car-oj"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a
+            className="social-btn social-btn-mail"
+            href="https://github.com/devil-geek"
+          >
+            <FaGithub />
+          </a>
+          <a
+            className="social-btn social-btn-mail"
+            href="mailto:car.oj@hotmail.com?subject=Contact"
+          >
+            <FaEnvelope />
+          </a>
+        </div>
+      </div>
+    </section>
+  </header>
+);
 
 export default Header;

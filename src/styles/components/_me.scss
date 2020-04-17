@@ -1,0 +1,53 @@
+.me {
+  max-width: 350px;
+  border: 16px outset $primary-dark;
+  border-radius: 140px 0px 140px 0px;
+  margin: 0 auto;
+}
+
+.hi {
+  margin: 0 auto;
+  border-radius: 50px 50px 50px 0px;
+  background: $primary-dark;
+  width: 11rem;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  color: $text-primary;
+}
+
+#about {
+  background-image: url('../images/bg.svg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-me {
+  max-width: 500px;
+  margin: 3rem 3rem 5rem;
+}
+
+.about-img {
+  width: 500px;
+  max-width: 100%;
+}
+
+#header {
+  position: relative;
+  padding: var(--spacer);
+  padding-top: 30vh;
+  height: 100vh;
+  max-height: 1000px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
