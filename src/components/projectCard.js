@@ -4,7 +4,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectCard = props => {
   const project = props.project;
-  if (!project) {
+  if (!project || !project.image.childImageSharp) {
     return null;
   }
   return (
