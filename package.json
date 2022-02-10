@@ -22,7 +22,7 @@
     "gatsby-transformer-json": "^2.1.7",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.21",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
